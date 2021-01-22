@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Piano Practice </title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="hopkins-note-announcer">
+		<div class="hn-outline">
+			<div class="header">
+				<select id="speed" onchange="speedChanged();">
+					<option value="5">Slow</option>
+					<option value="3">Medium</option>
+					<option value="1" selected>Fast</option>
+				</select>
+			</div>
+			<div class="body">
+				<h1 id="announce">
+					
+				</h1>
+				<!-- <h4 id="countdown" style="display:none;">
+					
+				</h4> -->
+			</div>
+			<div class="footer">
+				<button class="play-pause-button paused" aria-live="assertive" tabindex="32" aria-label="Pause">
+					<svg width="50" height="50" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<defs>
+							<path id="ytp-12" d="M11,10 L18,13.74 18,22.28 11,26 M18,13.74 L26,18 26,18 18,22.28">
+								<animate id="animation" begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" to="M11,10 L17,10 17,26 11,26 M20,10 L26,10 26,26 20,26" from="M11,10 L18,13.74 18,22.28 11,26 M18,13.74 L26,18 26,18 18,22.28" dur="0.1s" keySplines=".4 0 1 1" repeatCount="1"></animate>
+							</path>
+						</defs>
+						<use xlink:href="#ytp-12" class="ytp-svg-shadow"></use>
+						<use xlink:href="#ytp-12" class="ytp-svg-fill"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<audio src="" id="player">
+	<p>If you are reading this, it is because your browser does not support the audio element.</p>
+	</audio>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+.hopkins-note-announcer {
+	width:100%;
+	max-width:600px;
+	height:300px;
+	background:#282923;
+	/*background-image:url('assets/images/background-concert.jpg');*/
+	background-size:cover;
+	margin:auto;
+	/*padding-top:10px;*/
+	border-radius:5px;
+	box-shadow:0 0 10px #111;
+	position:relative;
+}
+
+.hn-outline {
+	position:absolute;
+	top:10px;
+	left:10px;
+	right:10px;
+	bottom:10px;
+	/*width: calc(100% - 20px);
+	height: calc(100% - 20px);*/
+	margin: auto;
+	background: rgba(0,0,0,0.2); 
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(5px);
+	border-radius:5px;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color:white;
+}
+
+.hn-outline .header {
+	display: flex;
+	justify-content: flex-end;
+	height:40px;
+	flex-shrink:0;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.hn-outline .header #speed {
+	padding: 5px 15px;
+	margin: 5px;
+	background: transparent;
+	color: white;
+	font-weight: 500;
+	font-size: 16px;
+	cursor:pointer;
+}
+.hn-outline .header #speed > option {
+	color: black;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.hn-outline .body {
+	display:flex;
+	justify-content: center;
+	flex-grow:1;
+	/*overflow:hidden;*/
+	height:150px;
+	flex-shrink:0;
+
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+}
+
+.hn-outline .body #announce {
+	font-size:6em;
+	color:white;
+	font-weight:600;
+	text-shadow:0 0 5px black;
+	margin-top:0;
+	position:relative;
+	bottom:20px;
+}
+
+/*.hn-outline .body #countdown {
+	font-size:2em;
+	color:white;
+	font-weight:600;
+	text-shadow:0 0 5px black;
+}*/
+
+.hn-outline .footer {
+	margin-bottom:10px;
+	display:flex;
+	justify-content: center;
+	height:100px;
+	flex-shrink:0;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 190px;
+}
+.hn-outline .footer .play-pause-button {
+	background: transparent;
+	border-width: 0;
+	fill:#FFF;
+	width:70px;
+	height:70px;
+	background:rgba(0,0,0,0.5);
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	border-radius:50%;
+	cursor:pointer;
+	box-shadow: 0 0 5px white;
+	transition:all ease-in-out 0.2s;
+	position: relative;
+	bottom:10px;
+}
+.hn-outline .footer .play-pause-button.paused {
+	width: 150px;
+	height: 150px;
+	bottom: 125px;
+}
+.hn-outline .footer .play-pause-button:hover {
+	box-shadow: 0 0 15px white;
+}
+.hn-outline .footer .play-pause-button:focus {
+	outline:none;
+}
+
+/* Announce Animatin */
+@keyframes announce {
+  0%   {transform: scale(1);display:block;}
+  /*25%  {transform: scale(1.2);}
+  50%  {transform: scale(1.5);}*/
+  100% {transform: scale(1.5);display:none;}
+}
+.announce {
+	animation-name: announce;
+	animation-duration: 0.4s;
+}
